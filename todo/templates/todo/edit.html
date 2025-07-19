@@ -15,12 +15,12 @@
     <form action="{% url 'update' task.id%}" method="post">
       {% csrf_token %}
       <div>
-        <label for="titleInput">Title</label><br>
+        <label for="titleInput">Title</label>
         <input id="titleInput" name="title" type="text" placeholder="Input title" value="{{ task.title }}">
       </div>
       <div>
-        <label for="dueInput">Due at:</label><br>
-        <input id="dueInput" name="due_at" type="datetime-local" value="{{ task.due_at |date:"Y-m-d H:i" }}">
+        <label for="dueInput">Due at:</label>
+        <input id="dueInput" name="due_at" type="datetime-local" value="{{ task.due_at|date:"Y-m-d\TH:i" }}">
       </div>
       <div>
         <button type="submit">Submit</button>
