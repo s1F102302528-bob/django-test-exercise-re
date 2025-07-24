@@ -66,3 +66,11 @@ def close(request, task_id):
     task.completed = True
     task.save()
     return redirect(index)
+
+def task_count_view(request):
+    total_tasks = Task.objects.count()
+
+    context = {
+        'total_tasks': total_tasks
+    }
+    return render(request, 'todo/task_count.html', context)
