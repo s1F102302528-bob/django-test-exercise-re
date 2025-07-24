@@ -1,0 +1,51 @@
+/* 全体の背景とフォント設定 */
+body {
+  font-family: 'Helvetica', sans-serif;
+  background-color: #f9f9f9;
+  margin: 40px;
+  color: #333;
+}
+
+/* タイトル（タスク名） */
+h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 6px 0;
+  padding: 4px 8px;
+  background-color: #fff;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+li:contains("Completed") {
+  border-left-color: #2ecc71;
+}
+
+li:contains("Not Completed") {
+  border-left-color: #e74c3c;
+}
+
+div a {
+  display: inline-block;
+  margin: 10px 6px 0 0;
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+div a:hover {
+  background-color: #2980b9;
+}
